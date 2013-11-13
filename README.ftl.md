@@ -25,15 +25,15 @@ What you will need
 ------------------
 
  - About 15 minutes
- - A Mac running OS X
- - Xcode
+ - A Mac with OS X
+ - [Xcode]
  - An internet connection
 
 
 Create an iOS Project
 ---------------------
 
-Within Xcode, create a new project, using the "Single View Application" template. If you prefer, you can use the project in the `initial` folder and skip ahead to [Create a ViewController](#initial) 
+Within Xcode, create a new project, using the "Single View Application" template. If you prefer, you can use the project in the `initial` folder and skip ahead to [create a ViewController](#initial). When you are finished, you can compare your code to the `complete` folder and [run the client](#run).
 
 ![Create new Single View Application Project](images/project1.png)
 
@@ -69,15 +69,15 @@ The `fetchGreeting` method is where the REST request happens. It uses `NSURLConn
 If data was received and there wasn't an error when the HTTP request completes, `NSJSONSerialization` is used to read the data into an `NSDictionary`. Once the data is available in a dictionary, the "id" and "content" values can be retrieved and assigned to the two labels that were defined in the header.
 
 
-Create the View
----------------
+Create a View
+-------------
 
 TODO
 
 
-<a name="test"></a>
-Test the client
----------------
+<a name="run"></a>
+Run the client
+--------------
 
 You can now run the app from Xcode. It will open in the iOS simulator, where you see:
 
@@ -92,6 +92,7 @@ Summary
 Congratulations! You've just developed an iOS client that consumes a Spring-based RESTful web service.
 
 [gs-rest-service]: /guides/gs-rest-service/
+[Xcode]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
 [zip]: https://github.com/spring-guides/${project_id}/archive/master.zip
 <@u_rest/>
 <@u_json/>
