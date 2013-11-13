@@ -36,9 +36,13 @@ Within Xcode, create a new project, using the "Single View Application" template
 
 ![Create new Single View Application Project](images/project1.png)
 
-Choose the following options for the new project. These are the values used in the sample code. However, you are not publishing this app to the Apple App Store, so you can choose whatever you like.
+Choose the following options for the new project. These are the same values used in the sample code.
 
 ![Choose options for the new project](images/project2.png)
+
+When the project is created, you will see that several files are added. To complete this guide, you will edit `Main.storyboard`, `RestViewController.h`, and `RestViewController.m`
+
+![View the Xcode project contents](images/project3.png)
 
 
 <a name="initial"></a>
@@ -116,7 +120,7 @@ TODO
 Test the client
 ---------------
 
-You can now open the app in the iOS simulator, where you see:
+You can now run the app from Xcode. It will open in the iOS simulator, where you see:
 
 ![Model data retrieved from the REST service is rendered into the view.](images/hello.png)
 
@@ -126,7 +130,7 @@ The ID value will increment each time you click the refresh button.
 Summary
 -------
 
-Congratulations! You've just developed an jQuery client that consumes a Spring-based RESTful web service.
+Congratulations! You've just developed an iOS client that consumes a Spring-based RESTful web service.
 
 [gs-rest-service]: /guides/gs-rest-service/
 [zip]: https://github.com/spring-guides/gs-consuming-rest-ios/archive/master.zip
