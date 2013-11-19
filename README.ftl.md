@@ -121,6 +121,10 @@ You can now run the app from Xcode. It will open in the iOS simulator, where you
 
 The ID value will increment each time you click the refresh button.
 
+If the simulator window is too large for your display, you can reduce its size by selecting a scaled view of it:
+
+![Scale simulator](images/scale-simulator.png)
+
 
 Summary
 -------
