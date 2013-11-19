@@ -64,15 +64,51 @@ Now update the `fetchGreeting` method body in the main class file.
 
 There are two methods in the main class file, `fetchGreeting` and `viewDidLoad`. `RestViewController` inherits from `UIViewController`, and `viewDidLoad` overrides the default implementation so that `fetchGreeting` is called when the view is first loaded.
 
-The `fetchGreeting` method is where the REST request happens. It uses `NSURLConnection` to send an asynchronous request to the specified URL. This particular method makes use of an Ojective-C construct called a "block". Blocks are similar to closures or lambdas in other programming languages. In this case, the block is passed to the `completionHandler` method parameter, meaning that on completion the code within the block will be executed.
+The `fetchGreeting` method is where the REST request happens. It uses `NSURLConnection` to send an asynchronous request to the specified URL. This particular method makes use of an Ojective-C construct called a "block". Blocks are similar to closures or lambdas in other programming languages. In this case, the block is passed to the `completionHandler` method parameter, meaning that on completion of the HTTP request the code within the block is executed.
 
-If data was received and there wasn't an error when the HTTP request completes, `NSJSONSerialization` is used to read the data into an `NSDictionary`. Once the data is available in a dictionary, the "id" and "content" values can be retrieved and assigned to the two labels that were defined in the header.
+If data is received and there is not an error when the HTTP request completes, `NSJSONSerialization` is used to read the data into an `NSDictionary`. Once the data is available in a dictionary, the "id" and "content" values are retrieved and assigned to the two labels that are defined in the header.
 
 
 Create a View
 -------------
 
-TODO
+Select the `main.storyboard` from the project navigator on the left side of the Xcode window. A Storyboard contains the layout for the view. Remember that you can always use the code in the `initial` folder if you have trouble with any of these steps.
+
+![Select main.storyboard](images/select-storyboard.png)
+
+Xcode provides a WYSIWYG editor for creating views. This editor is often referred to as Interface Builder because, historically, it was a separate application. You will now see the layout for the `RestViewController`. If you are viewing the layout from the `initial` folder, it includes a few labels for context. If you created a new project yours is empty.
+
+![View main.storyboard](images/view-storyboard.png)
+
+In the bottom right corner of Xcode select and drag two `Label` objects to the storyboard layout. You can filter the list of objects using the field at the bottom. You will use the first label to display the Greeting's ID, and the second for the Greeting's content.
+
+![Select Label object](images/select-label.png)
+
+Next, select and drag a `Button` object to the storyboard layout. This button will be used to refresh the content by making additional REST requests to the service.
+
+![Select Button object](images/select-button.png)
+
+Double-click one label and change it to "[id]", and the other to "[content]". This will be the placeholder text. These values will be replaced on successful completion of the HTTP request as described in "Create a ViewController" section. Lastly double-click the button to change it to read "Refresh".
+
+![View complete storyboard](images/complete-storyboard.png)
+
+Now that you have all the UI objects on the storyboard, you can associate those objects with the properties in the `RestViewController`. The terminology used within Xcode is adding a new referencing outlet. Control-click the "id" label. Select the circle next to the "New Referencing Outlet" and drag it to the "Rest View Controller" icon. All the properties which are declared with the `IBOutlet` type modifier are listed. Select the `greetingId` to complete the association.
+
+![Select new referencing outlet for id label](images/greetingId-outlet1.png)
+
+![Select new referencing outlet for id label](images/greetingId-outlet2.png)
+
+Repeat these same steps for the "content" label, this time selecting the `greetingContent` as the "New Referencing Outlet".
+
+![Select new referencing outlet for content label](images/greetingContent-outlet1.png)
+
+![Select new referencing outlet for content label](images/greetingContent-outlet2.png)
+
+The final task is to add a referencing outlet for the button. In this case you will associate a button event with the `fetchGreeting` method in the `RestViewController`. It was declared with the `IBAction` type modifier.
+
+![Select new referencing outlet for refresh button](images/fetchGreeting-outlet1.png)
+
+![Select new referencing outlet for refresh button](images/fetchGreeting-outlet2.png)
 
 
 <a name="run"></a>
