@@ -125,11 +125,11 @@ In the bottom right corner of Xcode select and drag two `Label` objects to the s
 
 ![Select Label object](images/select-label.png)
 
-Next, select and drag a `Button` object to the storyboard layout. This button will be used to refresh the content by making additional REST requests to the service.
+Next, select and drag a `Button` object to the storyboard layout. This button will be used to refresh the content by making additional HTTP requests to the REST service.
 
 ![Select Button object](images/select-button.png)
 
-Double-click one label and change it to "[id]", and the other to "[content]". This will be the placeholder text. These values will be replaced on successful completion of the HTTP request as described in "Create a ViewController" section. Lastly double-click the button to change it to read "Refresh".
+Double-click one label and change it to "[id]", and the other to "[content]". This will be the placeholder text. These values will be replaced on successful completion of the HTTP request as described in "Create a ViewController" section. Lastly double-click the button to change it to read "Refresh". Your storyboard should now look similar to the following:
 
 ![View complete storyboard](images/complete-storyboard.png)
 
@@ -145,7 +145,7 @@ Repeat these same steps for the "content" label, this time selecting the `greeti
 
 ![Select new referencing outlet for content label](images/greetingContent-outlet2.png)
 
-The final task is to add a referencing outlet for the button. In this case you will associate a button event with the `fetchGreeting` method in the `RestViewController`. It was declared with the `IBAction` type modifier.
+The final task is to add a referencing outlet for the button. In this case you will associate a button event with the `fetchGreeting` method in the `RestViewController`, which is declared with the `IBAction` type modifier.
 
 ![Select new referencing outlet for refresh button](images/fetchGreeting-outlet1.png)
 
