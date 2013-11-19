@@ -8,11 +8,14 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data, NSError *connectionError)
      {
          if (data.length > 0 && connectionError == nil)
          {
-             NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+             NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data
+                                                                      options:0
+                                                                        error:NULL];
              self.greetingId.text = [[greeting objectForKey:@"id"] stringValue];
              self.greetingContent.text = [greeting objectForKey:@"content"];
          }
