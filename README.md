@@ -36,7 +36,7 @@ Within Xcode, create a new project, using the "Single View Application" template
 
 ![Create new Single View Application Project](images/project1.png)
 
-Choose the following options for the new project. These are the same values used in the sample code.
+Choose the following options for the new project. These are the same values used in the sample code. Note that `iPhone` is selected in the Devices drop down menu.
 
 ![Choose options for the new project](images/project2.png)
 
@@ -116,9 +116,9 @@ Now update the `fetchGreeting` method body in the main class file.
 @end
 ```
 
-There are two methods in the main class file, `fetchGreeting` and `viewDidLoad`. `RestViewController` inherits from `UIViewController`, and `viewDidLoad` overrides the default implementation so that `fetchGreeting` is called when the view is first loaded.
+There are three methods in the main class file, `fetchGreeting`, `viewDidLoad`, and `didReceiveMemoryWarning`. `RestViewController` inherits from `UIViewController`, and `viewDidLoad` and `didReceiveMemoryWarning` override the default implementations. `viewDidLoad` is modified so that `fetchGreeting` is called when the view is first loaded. `didReceiveMemoryWarning` is included for consistency with the default class template used when creating a new project, but otherwise it is unused in this guide.
 
-The `fetchGreeting` method is where the REST request happens. It uses `NSURLConnection` to send an asynchronous request to the specified URL. This particular method makes use of an Ojective-C construct called a "block". Blocks are similar to closures or lambdas in other programming languages. In this case, the block is passed to the `completionHandler` method parameter, meaning that on completion of the HTTP request the code within the block is executed.
+The `fetchGreeting` method is where the HTTP request happens. It uses `NSURLConnection` to send an asynchronous request to the specified URL. This particular method makes use of an Objective-C construct called a "block". Blocks are similar to closures or lambdas in other programming languages. In this case, the block is passed to the `completionHandler` method parameter, meaning that on completion of the HTTP request the code within the block is executed.
 
 If data is received and there is not an error when the HTTP request completes, `NSJSONSerialization` is used to read the data into an `NSDictionary`. Once the data is available in a dictionary, the "id" and "content" values are retrieved and assigned to the two labels that are defined in the header.
 
