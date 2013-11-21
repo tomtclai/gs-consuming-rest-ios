@@ -69,7 +69,7 @@ First, modify the header file to include two properties, and a method signature.
     
 The `greetingId` and `greetingContent` properties are `UILabel` types. These properties are declared with the type qualifier of `IBOutlet`. By declaring these as an `IBOutlet`, they can easily be connected to the view. Note how the `fetchGreeting` method is also declared with a type qualifier, in this case `IBAction`. Like the properties, this allows the method to be connected to a control in the view, for example a button.
 
-Now update the `fetchGreeting` method body in the main class file. 
+Now update the `fetchGreeting` method body in the main class file.
 
 `Rest/RestViewController.m`
 ```m
@@ -134,7 +134,7 @@ Xcode provides a WYSIWYG editor for creating views. This editor is often referre
 
 ![View main.storyboard](images/view-storyboard.png)
 
-In the bottom right corner of Xcode select and drag two `Label` objects to the storyboard layout. You can filter the list of objects using the field at the bottom. You will use the first label to display the Greeting's ID, and the second for the Greeting's content.
+In the bottom right corner of Xcode select and drag two `Label` objects to the storyboard layout. You can filter the list of objects using the field at the bottom. You will use the first label to display the Greeting's ID, and the second for the Greeting's content. If you created a new project follow these same steps to add three more labels (five total) to match the code from the `initial` folder.
 
 ![Select Label object](images/select-label.png)
 
@@ -142,9 +142,15 @@ Next, select and drag a `Button` object to the storyboard layout. This button wi
 
 ![Select Button object](images/select-button.png)
 
-Double-click one label and change it to "[id]", and the other to "[content]". This will be the placeholder text. These values will be replaced on successful completion of the HTTP request as described in "Create a ViewController" section. Lastly double-click the button to change it to read "Refresh". Your storyboard should now look similar to the following:
+Double-click one label and change it to "[id]", and the other to "[content]". This will be the placeholder text. These values will be replaced on successful completion of the HTTP request as described in "Create a ViewController" section. For new projects, modify the other three labels to read "Hello iOS", "The ID is", and "The Content is". Lastly, double-click the button to change it to read "Refresh".
+
+Using the editor, you can move these labels around the storyboard to look similar to the following:
 
 ![View complete storyboard](images/complete-storyboard.png)
+
+The content and id returned from the RESTful service may be longer than the label widths allow. Resize the width of the "[id]" and "[content]" labels to accommodate larger string values.
+
+![Resize labels](images/resize-labels.png)
 
 Now that you have all the UI objects on the storyboard, you can associate those objects with the properties in the `RestViewController`. The terminology used within Xcode is adding a new referencing outlet. Control-click the "id" label. Select the circle next to the "New Referencing Outlet" and drag it to the "Rest View Controller" icon. All the properties which are declared with the `IBOutlet` type modifier are listed. Select the `greetingId` to complete the association.
 
@@ -169,7 +175,7 @@ The final task is to add a referencing outlet for the button. In this case you w
 Run the client
 --------------
 
-You can now run the app from Xcode. It will open in the iOS simulator, where you see:
+You can now run the app from Xcode. To do this, click the play button (triangle) in the top left corner of Xcode. It will open in the iOS simulator, where you see:
 
 ![Model data retrieved from the REST service is rendered into the view.](images/hello.png)
 
