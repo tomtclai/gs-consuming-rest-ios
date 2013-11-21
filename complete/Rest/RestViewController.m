@@ -1,5 +1,9 @@
 #import "RestViewController.h"
 
+@interface RestViewController ()
+
+@end
+
 @implementation RestViewController
 
 - (IBAction)fetchGreeting;
@@ -26,6 +30,12 @@
 {
     [super viewDidLoad];
     [self fetchGreeting];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

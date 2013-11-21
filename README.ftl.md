@@ -1,5 +1,5 @@
 <#assign project_id="gs-consuming-rest-ios">
-This guide walks you through writing a simple iOS client that consumes a Spring MVC-based [RESTful web service][u-rest].
+This guide walks you through building a simple iOS client that consumes a Spring MVC-based [RESTful web service][u-rest].
 
 
 What you will build
@@ -18,7 +18,7 @@ The service will respond with a [JSON][u-json] representation of a greeting:
 {"id":1,"content":"Hello, World!"}
 ```
 
-The iOS client will render the ID and content into the DOM.
+The iOS client will render the ID and content into a view.
 
 
 What you will need

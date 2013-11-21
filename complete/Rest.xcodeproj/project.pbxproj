@@ -423,6 +423,7 @@
 				81B7CFF61831A02300623360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81B7CFF71831A02300623360 /* Build configuration list for PBXNativeTarget "RestTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +432,7 @@
 				81B7CFF91831A02300623360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
