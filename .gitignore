@@ -47,3 +47,5 @@ profile
 DerivedData
 *.hmap
 *.xccheckout
+
+README.html
