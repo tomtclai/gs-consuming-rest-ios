@@ -147,3 +147,6 @@ image::images/scale-simulator.png[Scale simulator]
 == Summary
 
 Congratulations! You've just developed an iOS client that consumes a Spring-based RESTful web service.
+
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
+
