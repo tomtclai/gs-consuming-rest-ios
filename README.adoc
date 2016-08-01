@@ -1,4 +1,9 @@
 ---
+== My changes https://github.com/tomtclai[(tomtclai)]
+
+Change the URL to localhost, so it works with the server at https://github.com/tomtclai/gs-rest-service
+
+---
 tags: [rest]
 projects: [spring-framework]
 ---
