@@ -8,7 +8,7 @@
 
 - (IBAction)fetchGreeting;
 {
-    NSURL *url = [NSURL URLWithString:@"http://rest-service.guides.spring.io/greeting"];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/greeting"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
